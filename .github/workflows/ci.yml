@@ -36,7 +36,7 @@ jobs:
         echo "includeBuild './megamek'" >settings_local.gradle
         echo "rootProject.ext.mmDir = './megamek'" >properties_local.gradle
     - name: Build with Gradle
-      run: ./gradlew -I .github/build-scan-init.gradle build --stacktrace -Dscan.tag.CI "-Dscan.link.VCS=${{ github.event.pull_request.html_url }}"
+      run: ./gradlew -I .github/build-scan-init.gradle build --stacktrace --scan -Dscan.tag.CI "-Dscan.link.VCS=${{ github.event.pull_request.html_url }}"
     - name: Upload Test Logs on Failure
       uses: actions/upload-artifact@v2-preview
       if: failure()
