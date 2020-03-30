@@ -33,7 +33,7 @@ jobs:
       if: failure()
       with:
         name: failure-logs
-        path: megamek/build/reports/
+        path: build/reports/
     - name: Upload Releases
       uses: actions/upload-artifact@v2-preview
       # Only upload releases on one leg
