@@ -29,7 +29,7 @@ jobs:
     - name: Checkout MegaMek
       uses: actions/checkout@v2
       with:
-        repository: https://github.com/MegaMek/megamek.git
+        repository: MegaMek/megamek
         path: ../megamek
     - name: Build with Gradle
       run: ./gradlew build --stacktrace
