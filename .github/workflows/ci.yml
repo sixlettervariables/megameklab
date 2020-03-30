@@ -34,7 +34,7 @@ jobs:
     - name: Build settings_local.gradle and properties_local.gradle
       run: |
         echo "includeBuild './megamek'" >settings_local.gradle
-        echo "rootProject.ext.mmDir './megamek'" >properties_local.gradle
+        echo "rootProject.ext.mmDir = './megamek'" >properties_local.gradle
     - name: Build with Gradle
       run: ./gradlew -PlocalMMDir="./megamek" build --stacktrace
     - name: Upload Test Logs on Failure
