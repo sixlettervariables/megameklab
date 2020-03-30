@@ -27,7 +27,7 @@ jobs:
       run: chmod +x gradlew
       if: runner.os != 'Windows'
     - name: Build with Gradle
-      run: ./gradlew build
+      run: ./gradlew build --stacktrace
     - name: Upload Test Logs on Failure
       uses: actions/upload-artifact@v2-preview
       if: failure()
