@@ -30,7 +30,11 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: MegaMek/megamek
-        path: ../megamek
+        path: ./megamek
+    - name: Build settings_local.gradle
+      run: |
+        echo "localMMDir './megamek'" >settings_local.gradle
+        echo "includeBuild './megamek'" >>settings_local.gradle
     - name: Build with Gradle
       run: ./gradlew build --stacktrace
     - name: Upload Test Logs on Failure
