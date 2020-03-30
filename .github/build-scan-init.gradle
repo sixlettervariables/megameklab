@@ -1,5 +1,6 @@
 import com.gradle.enterprise.gradleplugin.GradleEnterprisePlugin
 import com.gradle.scan.plugin.BuildScanPlugin
+import com.gradle.scan.plugin.PublishedBuildScan
 import org.gradle.util.GradleVersion
 
 initscript {
