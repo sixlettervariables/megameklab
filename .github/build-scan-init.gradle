@@ -39,5 +39,8 @@ void configureExtension(extension) {
     extension.buildScan.with {
         termsOfServiceUrl = "https://gradle.com/terms-of-service"
         termsOfServiceAgree = "yes"
+        buildScanPublished { PublishedBuildScan scan ->
+            println "::set-output name=buildScanUri::${scan.buildScanUri}\n"
+        }
     }
 }
